@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style>
+  @charset "UTF-8";
+* {
+  font-family: "微軟正黑體";
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+background-image: -o-linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+background-image: -moz-linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+background-image: -webkit-linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+background-image: -ms-linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+
+background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #cfd9df),
+    color-stop(1, #e2ebf0)
+);
+}
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  border: solid 2px #grey;
+  width: 500px;
+  height: 750px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px #333;
+  background-color: #77969a;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 150px
+ 
+  
+}
+.form:hover {
+  transform: translate(-15px, -15px);
+}
+
+.title {
+  margin-top: 20px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.title p {
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.content {
+  width: 100%;
+}
+.content .pic {
+  width: 150px;
+  height: 150px;
+  border: solid 2px white;
+  border-radius: 100%;
+  margin: 15px;
+  margin-left: 40px;
+}
+.content hr {
+  border-width: 2px;
+  border-color: orange;
+  width: 90%;
+  text-align: left;
+}
+
+.txt {
+  width: 100%;
+}
+.txt ul {
+  width: 100%;
+}
+.txt li {
+  font-weight: 700;
+  font-size: 20px;
+}
+.txt li input {
+  margin: 5px;
+  border-radius: 8px;
+}
+
+</style>
+</head>
+
+<body>
+ <form id="form1" name="form1" method="post" action="">
+  <div class="wrap">
+  <div class="form">
+    <div class="title"> 
+      <p>修改個人資訊</p>
+    </div>
+    <div class="content">
+      <div class="pic"><img src="林啟方.jpg" alt=""/></div>
+      <hr/>
+      <div class="txt">
+        <ul>
+          <li>姓名:
+            <input type="text"/>
+          </li>
+          <li>學號:
+            <input type="text"/>
+          </li>
+          <li>學校:
+            <input type="text"/>
+          </li>
+          <li>科系:
+            <input type="text"/>
+          </li>
+          <li>地址:
+            <input type="text"/>
+          </li>
+          <li>手機:
+            <input type="text"/>
+          </li><br/>
+          <li>修改日期:
+            <input id="my-date" type="text"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="date">
+        <p> </p>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+<script>
+  $(function(){
+  $('#my-date').datepicker();
+   })
+</script>
+</body>
+</html>
